@@ -16,7 +16,6 @@ public class TaskService implements ITaskService {
     @Override
     public List<Task> listTasks() {
         return taskRepository.findAll();
-
     }
 
     @Override
