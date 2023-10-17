@@ -11,6 +11,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -37,9 +38,18 @@ public class IndexController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String adder(@ModelAttribute("employeeForm") Employee employee, HttpServletRequest request) {
-        logger.info("Employee to add: "+employee);
+        logger.info("Employee to add: " + employee);
         employeeService.addEmployee(employee);
         return "redirect:/";
+    }
+
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    public String showEdit(@RequestParam int idEmployee, ModelMap modelMap) {
+        Employee employee = employeeService.findEmployeeById(idEmployee);
+        logger.info("Employee to edit: " + employee);
+        modelMap.put("employee", employee);
+        return "edit";
+
     }
 
 }

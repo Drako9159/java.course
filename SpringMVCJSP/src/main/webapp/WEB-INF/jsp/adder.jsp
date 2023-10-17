@@ -5,7 +5,7 @@
 <div class="container">
     <div class="text-left" style="margin: 30px">
         <h3>Add Employee</h3>
-        <form action="/employees/add" modelAttribute="employeeForm" method="post">
+        <form action="${urlAdd}" modelAttribute="employeeForm" method="post">
             <div class="mb-3">
                 <label for="nameEmployee" class="form-label">Name</label>
                 <input type="text" class="form-control" id="nameEmployee" name="nameEmployee" aria-describedby="emailHelp" required="true">
@@ -20,7 +20,7 @@
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-warning btn-sm me-3">Add</button>
-                <a href="/employees" class="btn btn-danger btn-sm">Return</a>
+                <a href="${urlHome}" class="btn btn-danger btn-sm">Return</a>
             </div>
 
 

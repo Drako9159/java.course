@@ -1,6 +1,6 @@
-<%@ include file="common/header.jsp"%>
+<%@ include file="common/header.jsp" %>
 
-<%@ include file="common/nav.jsp"%>
+<%@ include file="common/nav.jsp" %>
 
 <div class="container">
     <div class="text-center" style="margin: 30px">
@@ -14,6 +14,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Department</th>
                 <th scope="col">Salary</th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
@@ -27,6 +28,14 @@
                         <fmt:setLocale value="en_US"/>
                         <fmt:formatNumber type="currency" value="${employee.salary}"/>
                     </td>
+                    <td class="text-center">
+                        <c:set var="urlEdit">
+                            <c:url value="${application.contexPath}/edit">
+                                <c:param name="idEmployee" value="${employee.idEmployee}"/>
+                            </c:url>
+                        </c:set>
+                        <a href="${urlEdit}" class="btn btn-warning btn-sm me-3">Edit</a>
+                    </td>
                 </tr>
             </c:forEach>
 
@@ -37,4 +46,4 @@
 </div>
 
 
-<%@ include file="common/footer.jsp"%>
+<%@ include file="common/footer.jsp" %>
