@@ -1,10 +1,10 @@
-package drako.accounts;
+package drako.inventory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AccountsApplicationTests {
+class InventoryApplicationTests {
 
 	@Test
 	void contextLoads() {
