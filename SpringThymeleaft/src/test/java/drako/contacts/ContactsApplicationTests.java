@@ -1,10 +1,10 @@
-package drako.employees;
+package drako.contacts;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EmployeesApplicationTests {
+class ContactsApplicationTests {
 
 	@Test
 	void contextLoads() {
