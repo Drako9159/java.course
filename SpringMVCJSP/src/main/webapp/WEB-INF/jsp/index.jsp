@@ -35,6 +35,14 @@
                             </c:url>
                         </c:set>
                         <a href="${urlEdit}" class="btn btn-warning btn-sm me-3">Edit</a>
+
+                        <c:set var="urlDelete">
+                            <c:url value="${application.contexPath}/delete">
+                                <c:param name="idEmployee" value="${employee.idEmployee}"/>
+                            </c:url>
+                        </c:set>
+                        <a href="${urlDelete}" class="btn btn-danger btn-sm me-3">Delete</a>
+
                     </td>
                 </tr>
             </c:forEach>
