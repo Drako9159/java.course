@@ -10,7 +10,7 @@ public interface IProductService {
 
     public Product findProductById(Integer idProduct);
 
-    public void addProduct(Product product);
+    public Product addProduct(Product product);
 
     public void deleteProductById(Integer idProduct);
 }
